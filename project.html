@@ -31,12 +31,14 @@
             gap: 20px;
             padding: 20px;
             overflow-x: auto;
+           
         }
 
         .image-gallery img {
             width: 100%;
             height: auto;
             object-fit: cover;
+            border-radius: 2%;
         }
     </style>
 </head>
@@ -79,6 +81,9 @@
         <a href="img/tugas1.png" data-lightbox="image-gallery"><img src="img/tugas1.png" alt="Image 1"></a>
         <a href="img/tugas2.png" data-lightbox="image-gallery"><img src="img/tugas2.png" alt="Image 2"></a>
         <a href="img/tugas3.png" data-lightbox="image-gallery"><img src="img/tugas3.png" alt="Image 3"></a>
+        <a href="img/tugas1.png" data-lightbox="image-gallery"><img src="img/tugas1.png" alt="Image 4"></a>
+        <a href="img/tugas2.png" data-lightbox="image-gallery"><img src="img/tugas2.png" alt="Image 5"></a>
+        <a href="img/tugas3.png" data-lightbox="image-gallery"><img src="img/tugas3.png" alt="Image 6"></a>
         <!-- Add more images here -->
     </div>
 
@@ -116,6 +121,30 @@
 
 <!-- Custom JavaScript -->
 <script src="js/script.js"></script>
+<script>
+    $(document).ready(function() {
+      $('.image-gallery').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+    });
+  </script>
 
 </body>
 
